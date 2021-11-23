@@ -41,6 +41,8 @@ class Find():
             self.score -= (math.floor(abs(self.r_number-self.i_number)**(1/2)))*3
         else:
             self.attempt -= 1
+        if self.score < 0:
+            self.score = 0
         if self.i_number > self.r_number:
             print("The chosen number is smaller than yours!")
         else:
